@@ -5,14 +5,19 @@ This repository contains mini projects and exercises completed as part of my Web
 ## Projects Included
 
 01. File Paths – Practice using relative and absolute paths in HTML  
-02. Webpages – Basic webpage creation using HTML structure and elements  
-03. HTML Portfolio Project – Personal portfolio webpage using HTML  
+02. Webpages – Basic webpage creation using HTML and CSS
+03. Backend - HTTP request handling
 
 ## Technologies Used
 
 - HTML5  
-- CSS3 (upcoming)  
-- JavaScript (upcoming)
+- CSS3   
+- JavaScript
+- DOM
+- NodeJS
+- postman
+- Express.JS
+- EJS
 
 ## Purpose
 
