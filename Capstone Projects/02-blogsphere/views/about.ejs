@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<main class="main-content">
+  <div class="container">
+    <div class="about-container">
+      
+      <!-- Page Header -->
+      <div class="about-header">
+        <h1 class="about-title" id="about-heading">About BlogSphere</h1>
+        <p class="hero-subtitle" style="font-size: 1.1rem; color: var(--text-secondary);">A modern full-stack blogging platform built for developers and writers.</p>
+      </div>
+
+      <!-- Main About Narrative Content -->
+      <div class="about-content">
+        <p>BlogSphere is a full-stack, server-side rendered blogging application built as a modern showcase of web development principles. It is engineered using Node.js, Express.js, and EJS templates on the backend, alongside vanilla CSS and JavaScript on the frontend.</p>
+        
+        <p>The application is designed to be highly responsive, adaptive, and premium, providing a distraction-free environment to read, write, and manage stories.</p>
+
+        <h3>Core Functional Features</h3>
+        <ul class="features-list">
+          <li><strong>Full CRUD Operations:</strong> Complete control to create, view, edit, and delete stories.</li>
+          <li><strong>Unique Identifiers:</strong> Robust routing utilizing native Node.js <code>crypto.randomUUID()</code> keys.</li>
+          <li><strong>Form Validation:</strong> Dual-layer client-side and server-side checks to prevent invalid posts.</li>
+          <li><strong>Shared Layouts:</strong> Reusable global headers, navigation menus, and footers via EJS partials.</li>
+          <li><strong>Premium Aesthetics:</strong> Modern Midnight Indigo design system featuring subtle transitions and glassmorphism.</li>
+          <li><strong>Custom Confirms:</strong> Native-looking modal dialog intercepts to verify critical actions like post deletions.</li>
+        </ul>
+
+        <h3 style="margin-top: 32px;">Technical Stack</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8;">
+          <strong>Server & Middleware:</strong> Node.js, Express.js (body parsing, static directories, custom routers) <br>
+          <strong>Templating Engine:</strong> EJS (Embedded JavaScript) for dynamic HTML rendering <br>
+          <strong>Styling Core:</strong> Vanilla CSS3 (Custom Variables, Flexbox, CSS Grid, Transitions, Keyframes) <br>
+          <strong>Client Operations:</strong> Vanilla JS (DOM manipulation, validation handlers, custom overlay events)
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

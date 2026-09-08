@@ -1,0 +1,20 @@
+<header class="main-header">
+  <div class="container nav-container">
+    <a href="/" class="logo-link" id="nav-logo">
+      <span class="logo-text">BlogSphere</span>
+    </a>
+    
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="navbar" id="navbar">
+      <a href="/" class="nav-link <%= typeof currentPath !== 'undefined' && currentPath === '/' ? 'active' : '' %>" id="nav-home">Home</a>
+      <a href="/posts" class="nav-link <%= typeof currentPath !== 'undefined' && currentPath === '/posts' ? 'active' : '' %>" id="nav-blogs">Blogs</a>
+      <a href="/posts/new" class="nav-link <%= typeof currentPath !== 'undefined' && currentPath === '/posts/new' ? 'active' : '' %>" id="nav-create-post">Create Post</a>
+      <a href="/about" class="nav-link <%= typeof currentPath !== 'undefined' && currentPath === '/about' ? 'active' : '' %>" id="nav-about">About</a>
+    </nav>
+  </div>
+</header>

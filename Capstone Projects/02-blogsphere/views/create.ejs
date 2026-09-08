@@ -1,0 +1,80 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<main class="main-content">
+  <div class="container">
+    <div class="form-container">
+      <h1 class="form-title">Create New Story</h1>
+
+      <!-- Server-Side Validation Errors Banner -->
+      <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+        <div class="error-banner" id="error-banner">
+          <strong>Validation Failed:</strong>
+          <ul>
+            <% errors.forEach(error => { %>
+              <li><%= error %></li>
+            <% }) %>
+          </ul>
+        </div>
+      <% } %>
+
+      <!-- Blog Post Submission Form -->
+      <form action="/posts" method="POST" id="blog-form" novalidate>
+        
+        <!-- Title Input Field -->
+        <div class="form-group">
+          <label for="title" class="form-label">Blog Title</label>
+          <input 
+            type="text" 
+            name="title" 
+            id="title" 
+            class="form-control <%= typeof errors !== 'undefined' && typeof post !== 'undefined' && !post.title ? 'is-invalid' : '' %>" 
+            placeholder="Enter a catchy title..."
+            value="<%= typeof post !== 'undefined' ? post.title : '' %>"
+            required
+          >
+          <div class="invalid-feedback">Please enter a blog title.</div>
+        </div>
+
+        <!-- Author Input Field -->
+        <div class="form-group">
+          <label for="author" class="form-label">Author Name</label>
+          <input 
+            type="text" 
+            name="author" 
+            id="author" 
+            class="form-control <%= typeof errors !== 'undefined' && typeof post !== 'undefined' && !post.author ? 'is-invalid' : '' %>" 
+            placeholder="Your name or pen name..."
+            value="<%= typeof post !== 'undefined' ? post.author : '' %>"
+            required
+          >
+          <div class="invalid-feedback">Please enter the author name.</div>
+        </div>
+
+        <!-- Content Textarea Field -->
+        <div class="form-group">
+          <label for="content" class="form-label">Blog Content</label>
+          <textarea 
+            name="content" 
+            id="content" 
+            class="form-control <%= typeof errors !== 'undefined' && typeof post !== 'undefined' && !post.content ? 'is-invalid' : '' %>" 
+            placeholder="Share your thoughts, experiences or tutorials..." 
+            required
+          ><%= typeof post !== 'undefined' ? post.content : '' %></textarea>
+          <div class="invalid-feedback">Blog content cannot be empty.</div>
+        </div>
+
+        <!-- Action Form Buttons -->
+        <div class="form-actions">
+          <a href="/posts" class="btn btn-secondary" id="form-cancel-btn">Cancel</a>
+          <button type="submit" class="btn btn-primary" id="form-submit-btn">
+            Publish Post
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
